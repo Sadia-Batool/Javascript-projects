@@ -458,3 +458,215 @@ if (!(nam % 2 == 0)) {
   console.log(`You entered even number ${nam}`);
 }
 // out will be (you entered even number 6)
+
+//*  Switch Statement   *//
+//   Code Examples:
+//   Q-1:
+//Write a program that inputs a number of week's day and display the name of the day For example if user enter 1,
+//it display "Friday" and so on.
+//Solution:
+
+let day = prompt("Enter number of a weekday:");
+switch (day) {
+  case 1:
+    console.log("Friday");
+    break;
+  case 2:
+    console.log("Saturday");
+    break;
+  case 3:
+    console.log("Sunday");
+    break;
+  case 4:
+    console.log("Monday");
+    break;
+  case 5:
+    console.log("Tuesday");
+    break;
+  case 6:
+    console.log("Wednesday");
+    break;
+  case 7:
+    console.log("Thursday");
+    break;
+  default:
+    console.log("Invalid number");
+}
+
+//  Q-2:
+//Write a js program that inputs a character from the user and checks weather it is a 'vowel' or 'consonant'.
+//Solution:
+let c = prompt("Enter an alphabet:");
+// c = u
+switch (c) {
+  case "a":
+  case "A":
+    console.log("You entered vowel");
+    break;
+  case "e":
+  case "E":
+    console.log("You entered vowel");
+    break;
+  case "i":
+  case "I":
+    console.log("You entered vowel");
+    break;
+  case "o":
+  case "O":
+    console.log("You entered vowel");
+    break;
+  case "u":
+  case "U":
+    console.log("You entered vowel");
+    break;
+  default:
+    console.log("You entered consonant");
+}
+
+//   Q-3:
+// Display the following menu for a parking area:
+//  1.   M     = Motorcycle
+//  2.   C     = Car
+//  3.   B     = Bus
+// input type of vehicle and number of days to park the vehicle . it finally display Total charges for parking
+// according to the following criteria:
+//    Motorcycle    Rs.10 per day
+//    Car           Rs.20 per day
+//    Bus           Rs.30 per day
+// Solution:
+let type = prompt("enter type of vehicle");
+
+if (type == "M" || type == "C" || type == "B") {
+  let n = prompt("enter number of days to park the vehicle");
+  switch (type) {
+    case "M":
+      var t = 10 * n;
+      console.log(`Total charges for Motorcycle parking are: ${t}`);
+      break;
+    case "C":
+      var t = 20 * n;
+      console.log(`Total charges for Car parking are: ${Total}`);
+      break;
+    case "B":
+      var t = 30 * n;
+      console.log(`Total charges for Bus parking are: ${s}`);
+      break;
+  }
+} else {
+  console.log("Invalid type, please enter correct type!");
+}
+
+//  Q-4:
+//Input month number and day number and year then display Total number of days in this month and current date
+//Solution:
+let mNo = prompt("Enter any month number from '1' to '12' : ");
+let dNo = prompt("Enter day number ");
+if (mNo >= 1 && mNo <= 12 && dNo >= 1 && dNo <= 31) {
+  var yer = prompt("enter a year :");
+
+  switch (mNo) {
+    case "1":
+      console.log(`Date:  January${dNo}/${yer}`);
+      console.log(`Total days in january: 31`);
+      break;
+    case "2":
+      if (dNo >= 1 && dNo <= 28) {
+        console.log(`Date:  February${dNo}/${yer}`);
+        console.log(`Total days in February: 28`);
+        break;
+      } else {
+        console.log(`${dNo} date will not occur in 'February'`);
+        console.log("try again! in range of '1 - 28'");
+        break;
+      }
+    case "3":
+      console.log(`Date:  March${dNo}/${yer}`);
+      console.log(`Total days in March: 31`);
+      break;
+    case "4":
+      if (dNo >= 1 && dNo <= 30) {
+        console.log(`Date:  April${dNo}/${yer}`);
+        console.log(`Total days in April: 30`);
+        break;
+      } else {
+        console.log(`${dNo}  date will not occur in 'April'`);
+        console.log("try again! in range of '1 - 30'");
+        break;
+      }
+    case "5":
+      console.log(`Date:  May${dNo}/${yer}`);
+      console.log(`Total days in May: 31`);
+      break;
+    case "6":
+      if (dNo >= 1 && dNo <= 30) {
+        console.log(`Date:  June${dNo}/${yer}`);
+        console.log(`Total days in June: 30`);
+        break;
+      } else {
+        console.log(`${dNo}  date will not occur in 'June'`);
+        console.log("try again! in range of '1 - 30'");
+        break;
+      }
+    case "7":
+      console.log(`Date:  July${dNo}/${yer}`);
+      console.log(`Total days in July: 31`);
+      break;
+    case "8":
+      console.log(`Date:  August${dNo}/${yer}`);
+      console.log(`Total days in August: 31`);
+      break;
+    case "9":
+      if (dNo >= 1 && dNo <= 30) {
+        console.log(`Date:  September${dNo}/${yer}`);
+        console.log(`Total days in September: 30`);
+        break;
+      } else {
+        console.log(`${dNo}  date will not occur in 'September'`);
+        console.log("try again! in range of '1 - 30'");
+        break;
+      }
+    case "10":
+      console.log(`Date:  October${dNo}/${yer}`);
+      console.log(`Total days in October: 31`);
+      break;
+    case "11":
+      if (dNo >= 1 && dNo <= 30) {
+        console.log(`Date:  November ${dNo}/${yer}`);
+        console.log(`Total days in November: 30`);
+        break;
+      } else {
+        console.log(`${dNo}  date will not occur in 'November'`);
+        console.log("try again! in range of '1 - 30'");
+        break;
+      }
+    case "12":
+      console.log(`Date:  December ${dNo}/${yer}`);
+      console.log(`Total days in December: 31`);
+      break;
+  }
+} else if (!((mNo >= 1 && mNo <= 12) || (dNo >= 1 && dNo <= 31))) {
+  console.log("please! typed correct 'month' and 'day' number");
+} else if (!(dNo >= 1 && dNo <= 31)) {
+  console.log("Please! typed correct 'day' number");
+} else {
+  console.log("Sorry! enter correct 'month' number");
+}
+
+//   Q-5:
+//take the user name and age as input using prompts.then return back the following statement to the user as an alert
+//show message as follows: name is age years old
+//Solution:
+let n = prompt("enter your name");
+let ag = prompt("enter your age");
+alert(`${n} is ${ag} years old`);
+
+//Q-6:
+//A string is a golden string if it starts with character 'A' or 'a' and has a total length greater than 5.
+//For a given string print if it is golden or not.
+let str = prompt("enter a string");
+if (str[0] == "A" || (str[0] == "a" && str.length >= 5)) {
+  alert(`${str}, is a golden string`);
+} else {
+  alert(`${str},  is not a golden string`);
+}
+//*-------end condition structure--------*//
